@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <!-- ek minmax function hota h dekh lena -->
+    <style>
+        .container1{
+            width: 80vw;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) 2fr 1fr;
+            row-gap: 10px;
+            column-gap: 44px;
+            /* 
+            yeh properties bhi de sakte h
+            justify-items: center;
+            align-items: center; */
+        }
+
+        .item1{
+            border: 2px solid red;
+            height: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="item1 item-1">1</div>
+        <div class="item1">2</div>
+        <div class="item1">3</div>
+        <div class="item1 item-4">4</div>
+        <div class="item1">5</div>
+    </div>
+</body>
+</html>

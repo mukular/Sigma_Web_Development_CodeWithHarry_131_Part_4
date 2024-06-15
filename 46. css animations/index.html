@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <!-- aur bhi properties hoti h animations ki khud padh lena -->
+    <style>
+        .container{
+            background-color: rgb(9, 106, 106);
+            height: 80vh;
+            width: 30vw;
+        }
+
+        .box{
+            width: 34px;
+            height: 45px;
+            margin: 10px;
+            animation-name: harryKaAnimation;
+            animation-duration: 3s;   /* 3 second tak animation chalega */
+            animation-iteration-count: 3;  /* 3 baar animation chalega */ /* infinite se chalta hi rahega */
+            animation-timing-function: cubic-bezier(0.06, 0.92, 0.58, 1);
+            animation-delay: 2s; /* 2 second baad animation chalega */
+            animation-direction: alternate-reverse;  /* animation ki direction */
+        }
+
+        .box2{
+            width: 34px;
+            height: 45px;
+            margin: 10px;
+            animation: harryKaAnimation 3s ease-in-out 1s 1,
+                        harry2 20s ease-in 6s 1;
+        }
+
+        @keyframes harryKaAnimation{
+            from{
+                background-color: green;
+            }
+
+            to{
+                background-color: purple;
+                transform: translateX(1000px);
+            }
+        }
+
+        @keyframes harry2{
+            0%{
+                transform: rotate(100deg);
+                background-color: red;
+            }
+            20%{
+                transform: rotate(200deg);
+                background-color: yellowgreen;
+            }
+            50%{
+                transform: rotate(220deg);
+                background-color: pink;
+                color: white;
+            }
+            80%{
+                transform: rotate(300deg);
+                color: violet;
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+        <div class="box2">Box2</div>
+    </div>
+</body>
+</html>

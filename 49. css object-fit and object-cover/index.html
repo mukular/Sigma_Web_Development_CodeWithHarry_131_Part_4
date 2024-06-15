@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS object Fit and position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container1{
+            height: 466px;
+            width: 488px;
+            border: 2px solid black;
+            background-color: gray;
+            margin-bottom: 30px;
+        }
+
+        .img1{
+            width: 466px;
+            height: 488px;
+            object-fit: cover;
+        }
+        .container2{
+            height: 466px;
+            width: 488px;
+            border: 2px solid black;
+            background-color: gray;
+            margin-bottom: 30px;
+        }
+
+        .img2{
+            width: 466px;
+            height: 488px;
+            object-fit: contain; /* image puri dekhegi cut nhi hogi aur aspect ratio bhi maintain rahega */
+        }
+        .container3{
+            height: 466px;
+            width: 488px;
+            border: 2px solid black;
+            background-color: gray;
+            margin-bottom: 30px;
+        }
+
+        .img3{
+            width: 466px;
+            height: 488px;
+            object-fit: cover;
+            object-position: top right;  /* top right portion toh dikhega */
+        }
+        .container4{
+            height: 466px;
+            width: 488px;
+            border: 2px solid black;
+            background-color: gray;
+            margin-bottom: 30px;
+        }
+
+        .img4{
+            width: 466px;
+            height: 488px;
+            object-fit: cover;
+            object-position: 10px 20px;
+        }
+
+        .container5{
+            height: 500px;
+            width: 500px;
+            border: 2px solid black;
+            margin-bottom: 30px;
+            background-image: url(girl\ image2.png);
+            background-position: center center;
+        }
+        .container6{
+            height: 500px;
+            width: 500px;
+            border: 2px solid black;
+            margin-bottom: 30px;
+            background-image: url(girl\ image2.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <img class="img1" src="girl image2.png" alt="">
+    </div>
+    <div class="container2">
+        <img class="img2" src="girl image2.png" alt="">
+    </div>
+    <div class="container3">
+        <img class="img3" src="girl image2.png" alt="">
+    </div>
+    <div class="container4">
+        <img class="img4" src="girl image2.png" alt="">
+    </div>
+
+    <div class="container5"></div>
+    <div class="container6"></div>
+</body>
+</html>
